@@ -1,0 +1,98 @@
+/* ------------------------- HEADER -----------------------*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #034ea0;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.header h1 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* -------------------- PESQUISA AVANÇADA ------------------*/
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.period {
+    text-align: center;
+    color: gray;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+/* --------------- Funciona, porem apresenta erro ---------------
+.checkbox {
+    padding: 20px;
+}
+
+.example-h2 {
+    margin: 10px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.example-margin {
+    margin: 0 10px;
+}
+*/
+
+.blimpar {
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.bexibir {
+    margin: 5px;
+    background-color: #034ea0;
+    color: white;
+}
+
+
+/* ------------------- EXIBIÇÃO EM TABELA -----------------*/
+
+
+/* ------------------- EXIBIÇÃO EM GRÁFICO ----------------*/
+
+
+/* ------------------------- FOOTER -----------------------*/
+
+.footer {
+    color: white;
+    background-color: gray;
+    flex-direction: column;
+    bottom: 0;
+    padding-bottom: 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon {
+    vertical-align: middle;
+}
