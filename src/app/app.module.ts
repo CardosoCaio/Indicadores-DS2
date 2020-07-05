@@ -18,13 +18,17 @@ import { TabelaComponent } from './tabela/tabela.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { GraficoComponent } from './grafico/grafico.component'
+import { GraficoComponent } from './grafico/grafico.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     TabelaComponent,
-    GraficoComponent
+    GraficoComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

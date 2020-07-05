@@ -1,0 +1,14 @@
+.footer {
+    color: white;
+    background-color: gray;
+    flex-direction: column;
+    bottom: 0;
+    padding-bottom: 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon {
+    vertical-align: middle;
+}
