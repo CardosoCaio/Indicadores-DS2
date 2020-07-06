@@ -20,7 +20,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { GraficoComponent } from './grafico/grafico.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './footer/footer.component'
     TabelaComponent,
     GraficoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PesquisaComponent
   ],
   imports: [
     BrowserModule,

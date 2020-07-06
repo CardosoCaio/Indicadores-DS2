@@ -11,11 +11,10 @@ import { Registro } from './indicador.model';
 
 export class AppComponent implements OnInit{
 
-  registros: Registro[]
+  //registros: Registro[]
 
-  constructor(private registrotService: RegistroService){ }
+  constructor(){ } //(private registrotService: RegistroService)
 
   ngOnInit(): void {
-
   }
 }
