@@ -21,7 +21,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { GraficoComponent } from './grafico/grafico.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { PesquisaComponent } from './pesquisa/pesquisa.component'
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { ResultadoComponent } from './resultado/resultado.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PesquisaComponent } from './pesquisa/pesquisa.component'
     GraficoComponent,
     HeaderComponent,
     FooterComponent,
-    PesquisaComponent
+    PesquisaComponent,
+    ResultadoComponent
   ],
   imports: [
     BrowserModule,

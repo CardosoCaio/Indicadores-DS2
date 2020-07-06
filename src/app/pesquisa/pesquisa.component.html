@@ -1,18 +1,12 @@
+<app-header></app-header>
+
 <div class="content">
     <mat-card class="mat-elevation-z3 ">
         <div>
             <mat-card-title class="center">Pesquisa Avançada</mat-card-title>
             <mat-card-subtitle class="center">Selecione as opções desejadas</mat-card-subtitle>
         </div>
-        <!-- test db
-        <div>
-            <ul>
-                <li *ngFor="let registro of registros">
-                    {{ registro.ano }}
-                </li>
-            </ul>
-        </div>
-        -->
+
         <div class="center">
             <mat-form-field>
                 <mat-label>Eixo</mat-label>
@@ -73,9 +67,12 @@
         </div>
 
         <div class="center">
-            <button class="bexibir" mat-raised-button>Exibir</button>
+            <button class="bexibir" routerLink="/resultado" mat-raised-button>Exibir</button>
             <button class="blimpar" mat-raised-button>Limpar</button>
         </div>
 
     </mat-card>
 </div>
+<!--
+<app-footer></app-footer>
+-->

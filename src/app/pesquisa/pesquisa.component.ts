@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pesquisa',
+  selector: 'app-pesquisa', // Equivale a home
   templateUrl: './pesquisa.component.html',
   styleUrls: ['./pesquisa.component.css']
 })
