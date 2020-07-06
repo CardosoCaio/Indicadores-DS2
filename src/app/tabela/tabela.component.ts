@@ -14,7 +14,7 @@ export class TabelaComponent implements OnInit {
 
   registros: Registro[]
   
-  displayedColumns = ['id', 'ano', 'coleta', 'meta'];
+  displayedColumns = ['ano', 'coleta', 'meta'];
 
   constructor(private registrotService: RegistroService){ }
 

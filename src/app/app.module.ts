@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { ResultadoComponent } from './resultado/resultado.component'
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ResultadoComponent } from './resultado/resultado.component'
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatNativeDateModule
 
   ],
   providers: [],
