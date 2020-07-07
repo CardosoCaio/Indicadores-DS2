@@ -1,6 +1,4 @@
-import { RegistroService } from './registro.service';
 import { Component, OnInit } from '@angular/core';
-import { Registro } from './indicador.model';
 
 @Component({
   selector: 'app-root', // Seletor referenciado em index.html
@@ -8,13 +6,12 @@ import { Registro } from './indicador.model';
   styleUrls: ['app.component.css']
 })
 
+export class AppComponent implements OnInit {
 
-export class AppComponent implements OnInit{
-
-  //registros: Registro[]
-
-  constructor(){ } //(private registrotService: RegistroService)
+  constructor(){ }
 
   ngOnInit(): void {
-  }
+
+  }  
 }
+

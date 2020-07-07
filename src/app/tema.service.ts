@@ -1,18 +1,18 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
-import { Registro } from './indicador.model';
 import { Injectable } from '@angular/core';
+import { Tema } from './tema.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegistroService {
+export class TemaService {
 
-  baseUrl = "http://localhost:3001/registros" // Serviço teste
+  baseUrlTema = "http://localhost:8080/inova_macae/rest/tema/buscartemas"
 
   constructor(private http: HttpClient) {}
 
-  read(): Observable<Registro[]> {
-    return this.http.get<Registro[]>(this.baseUrl)
+  readTema(): Observable<Tema[]> {
+    return this.http.get<Tema[]>(this.baseUrlTema)
   }
 }

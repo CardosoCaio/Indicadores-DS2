@@ -1,18 +1,18 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
-import { Registro } from './indicador.model';
 import { Injectable } from '@angular/core';
+import { Eixo } from './eixo.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegistroService {
+export class EixoService {
 
-  baseUrl = "http://localhost:3001/registros" // Serviço teste
+  baseUrlEixo = "http://localhost:8080/inova_macae/rest/eixo/buscareixos"
 
   constructor(private http: HttpClient) {}
 
-  read(): Observable<Registro[]> {
-    return this.http.get<Registro[]>(this.baseUrl)
+  readEixo(): Observable<Eixo[]> {
+    return this.http.get<Eixo[]>(this.baseUrlEixo)
   }
 }

@@ -11,22 +11,16 @@
             <mat-form-field>
                 <mat-label>Eixo</mat-label>
                 <mat-select>
-                    <mat-option value="eixo1">Eixo 1</mat-option>
-                    <mat-option value="eixo2">Eixo 2</mat-option>
-                    <mat-option value="eixo3">Eixo 3</mat-option>
-                    <mat-option value="seriehistorica">Serie Histórica</mat-option>
+                    <mat-option *ngFor="let eixo of eixos" value="eixo">{{ eixo.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
 
         <div class="center">
             <mat-form-field>
-                <mat-label>Área</mat-label>
+                <mat-label>Tema</mat-label>
                 <mat-select>
-                    <mat-option value="area1">Área 1</mat-option>
-                    <mat-option value="area2">Área 2</mat-option>
-                    <mat-option value="area3">Área 3</mat-option>
-                    <mat-option value="educacao">Educação</mat-option>
+                    <mat-option *ngFor="let tema of temas" value="tema">{{ tema.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -35,10 +29,7 @@
             <mat-form-field>
                 <mat-label>Indicador</mat-label>
                 <mat-select>
-                    <mat-option value="indicador1">Indicador 1</mat-option>
-                    <mat-option value="indicador2">Indicador 2</mat-option>
-                    <mat-option value="indicador3">Indicador 3</mat-option>
-                    <mat-option value="evasaoescolar">Evasão Escolar</mat-option>
+                    <mat-option *ngFor="let indicador of indicadores" value="indicador">{{ indicador.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
