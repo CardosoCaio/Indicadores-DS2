@@ -12,7 +12,7 @@ export class IndicadorService {
 
   constructor(private http: HttpClient) {}
 
-  readIndicador(): Observable<Indicador[]> {
+  lerIndicador(): Observable<Indicador[]> {
     return this.http.get<Indicador[]>(this.baseUrlIndicador)
   }
 }

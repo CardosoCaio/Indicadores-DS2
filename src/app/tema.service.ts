@@ -12,7 +12,7 @@ export class TemaService {
 
   constructor(private http: HttpClient) {}
 
-  readTema(): Observable<Tema[]> {
+  lerTema(): Observable<Tema[]> {
     return this.http.get<Tema[]>(this.baseUrlTema)
   }
 }

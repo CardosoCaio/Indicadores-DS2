@@ -11,7 +11,9 @@
             <mat-form-field>
                 <mat-label>Eixo</mat-label>
                 <mat-select>
-                    <mat-option *ngFor="let eixo of eixos" value="eixo">{{ eixo.descricao }}</mat-option>
+                    <!--'ngFor' é uma diretiva estrutural que permite que se itere um array através de um loop 'for'-->
+                    <!--'eixo' é uma variável local e 'eixos' é a variável criada no componente-->
+                    <mat-option (click)="selecionarEixo()" *ngFor="let eixo of eixos" value="eixo">{{ eixo.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -20,7 +22,7 @@
             <mat-form-field>
                 <mat-label>Tema</mat-label>
                 <mat-select>
-                    <mat-option *ngFor="let tema of temas" value="tema">{{ tema.descricao }}</mat-option>
+                    <mat-option (click)="selecionarTema()" *ngFor="let tema of temas" value="tema">{{ tema.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -29,7 +31,7 @@
             <mat-form-field>
                 <mat-label>Indicador</mat-label>
                 <mat-select>
-                    <mat-option *ngFor="let indicador of indicadores" value="indicador">{{ indicador.descricao }}</mat-option>
+                    <mat-option (click)="selecionarIndicador()" *ngFor="let indicador of indicadores" value="indicador">{{ indicador.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -47,8 +49,8 @@
         </div>
 
         <div class="center">
-            <button class="bexibir" routerLink="/resultado" mat-raised-button>Exibir</button>
-            <button class="blimpar" mat-raised-button>Limpar</button>
+            <button class="bexibir" (click)="exibirInfoIndicador" routerLink="/resultado" mat-raised-button>Exibir</button>
+            <button class="blimpar" (click)="limparTela" mat-raised-button>Limpar</button>
         </div>
 
     </mat-card>
