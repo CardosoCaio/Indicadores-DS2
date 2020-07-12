@@ -19,8 +19,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { GraficoComponent } from './grafico/grafico.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { RodapeComponent } from './rodape/rodape.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { ResultadoComponent } from './resultado/resultado.component'
 import { MatNativeDateModule } from '@angular/material/core';
@@ -30,8 +30,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AppComponent,
     TabelaComponent,
     GraficoComponent,
-    HeaderComponent,
-    FooterComponent,
+    CabecalhoComponent,
+    RodapeComponent,
     PesquisaComponent,
     ResultadoComponent
   ],

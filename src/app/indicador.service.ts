@@ -8,11 +8,11 @@ import { Indicador } from './indicador.model';
 })
 export class IndicadorService {
 
-  baseUrlIndicador = "http://localhost:8080/inova_macae/rest/indicador/buscarindicadores"
+  urlIndicador = "http://localhost:8080/inova_macae/rest/indicador/buscarindicadores"
 
   constructor(private http: HttpClient) {}
 
   lerIndicador(): Observable<Indicador[]> {
-    return this.http.get<Indicador[]>(this.baseUrlIndicador)
+    return this.http.get<Indicador[]>(this.urlIndicador)
   }
 }

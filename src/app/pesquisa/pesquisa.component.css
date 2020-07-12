@@ -1,15 +1,15 @@
-.content {
+.conteudo {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.center {
+.centralizar {
     text-align: center;
 }
 
-.period {
+.periodo {
     text-align: center;
     color: gray;
     padding: 20px;

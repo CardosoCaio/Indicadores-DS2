@@ -1,13 +1,12 @@
-<app-header></app-header>
-
-<div class="content">
+<div class="conteudo">
     <mat-card class="mat-elevation-z3 ">
         <div>
-            <mat-card-title class="center">Pesquisa Avançada</mat-card-title>
-            <mat-card-subtitle class="center">Selecione as opções desejadas</mat-card-subtitle>
+            <mat-card-title class="centralizar">Pesquisa Avançada</mat-card-title>
+            <mat-card-subtitle class="centralizar">Selecione as opções desejadas</mat-card-subtitle>
         </div>
 
-        <div class="center">
+        <!-- Combobox (select) EIXOS -->
+        <div class="centralizar">
             <mat-form-field>
                 <mat-label>Eixo</mat-label>
                 <mat-select>
@@ -18,16 +17,18 @@
             </mat-form-field>
         </div>
 
-        <div class="center">
+        <!-- Combobox (select) TEMAS -->
+        <div class="centralizar">
             <mat-form-field>
                 <mat-label>Tema</mat-label>
                 <mat-select>
-                    <mat-option (click)="selecionarTema()" *ngFor="let tema of temas" value="tema">{{ tema.descricao }}</mat-option>
+                    <mat-option (click)="selecionarTema()" *ngFor="let tema of temas" [value]="tema">{{ tema.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
 
-        <div class="center">
+        <!-- Combobox (select) Indicadores -->
+        <div class="centralizar">
             <mat-form-field>
                 <mat-label>Indicador</mat-label>
                 <mat-select>
@@ -36,7 +37,8 @@
             </mat-form-field>
         </div>
 
-        <div class="period">
+        <!-- Data Picker -->
+        <div class="periodo">
             <mat-form-field appearance="fill">
                 <mat-label>Selecione o período</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
@@ -48,13 +50,11 @@
             </mat-form-field>
         </div>
 
-        <div class="center">
+        <!-- Botão "exibir" e "limpar" -->
+        <div class="centralizar">
             <button class="bexibir" (click)="exibirInfoIndicador" routerLink="/resultado" mat-raised-button>Exibir</button>
             <button class="blimpar" (click)="limparTela" mat-raised-button>Limpar</button>
         </div>
 
     </mat-card>
 </div>
-<!--
-<app-footer></app-footer>
--->

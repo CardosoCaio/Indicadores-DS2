@@ -5,10 +5,10 @@ import { ResultadoComponent } from './resultado/resultado.component';
 
 
 const routes: Routes = [{
-  path: "", // Raíz
+  path: "", // Diretório raíz, aplicado quando a aplicação inicia.
   component: PesquisaComponent
 },{
-  path: "resultado", // ./resultado
+  path: "resultado", // Diretório de redirecionamento do botão "Exibir" após sua execução.
   component: ResultadoComponent
 }
 ];

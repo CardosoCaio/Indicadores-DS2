@@ -8,11 +8,13 @@ import { Tema } from './tema.model';
 })
 export class TemaService {
 
-  baseUrlTema = "http://localhost:8080/inova_macae/rest/tema/buscartemas"
+  urlTema = "http://localhost:8080/inova_macae/rest/tema/buscartemas"
 
   constructor(private http: HttpClient) {}
 
-  lerTema(): Observable<Tema[]> {
-    return this.http.get<Tema[]>(this.baseUrlTema)
+  // Método que retorna um observable que vai ler um array de Temas.
+  lerTema(): Observable<Tema[]> { 
+    // Retorna uma requisição http do tipo 'get' que retorna uma lista de temas *<Tema[]> através da url dos temas.
+    return this.http.get<Tema[]>(this.urlTema) // Necessita do parâmetro 'idEixo' para retornar apenas os eixos do 'eixo' selecionado pelo usuário.
   }
 }
