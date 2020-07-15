@@ -1,8 +1,9 @@
 export interface Tema {
     descricao: string
-    dtCadastro: number
+    eixo:{
+        id: number
+    }
     id: number
-    idEixo: number
     idUsuarioCadastro: number
 }
 

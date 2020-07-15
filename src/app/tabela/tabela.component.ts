@@ -1,9 +1,10 @@
+import { PesquisaComponent } from './../pesquisa/pesquisa.component';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { Registro } from '../indicador.model';
-import { RegistroService } from '../registro.service';
+import { Coleta } from '../coleta.model';
+import { ColetaService } from '../coleta.service';
 
 @Component({
   selector: 'app-tabela',
@@ -12,15 +13,14 @@ import { RegistroService } from '../registro.service';
 })
 export class TabelaComponent implements OnInit {
 
-  registros: Registro[]
-  
+  coletas: Coleta[]
   displayedColumns = ['ano', 'coleta', 'meta'];
 
-  constructor(private registrotService: RegistroService){ }
+  constructor(private coletaService: ColetaService){ }
 
   ngOnInit(): void {
-    this.registrotService.read().subscribe(registros => {
-      this.registros = registros
+    this.coletaService.lerColeta().subscribe(coletas => {
+      this.coletas = coletas // Nome do modelo no teste: registros
     })
   }  
 }

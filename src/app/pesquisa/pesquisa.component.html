@@ -8,11 +8,11 @@
         <!-- Combobox (select) EIXOS -->
         <div class="centralizar">
             <mat-form-field>
-                <mat-label>Eixo</mat-label>
-                <mat-select>
+                <mat-label>Selecione um Eixo</mat-label>
+                <mat-select [(ngModel)]="descricaoEixo">
                     <!--'ngFor' é uma diretiva estrutural que permite que se itere um array através de um loop 'for'-->
                     <!--'eixo' é uma variável local e 'eixos' é a variável criada no componente-->
-                    <mat-option (click)="selecionarEixo()" *ngFor="let eixo of eixos" value="eixo">{{ eixo.descricao }}</mat-option>
+                    <mat-option (click)="listarTemas()" *ngFor="let eixo of eixos" [value]="eixo.descricao">{{ eixo.descricao }}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -20,9 +20,11 @@
         <!-- Combobox (select) TEMAS -->
         <div class="centralizar">
             <mat-form-field>
-                <mat-label>Tema</mat-label>
-                <mat-select>
-                    <mat-option (click)="selecionarTema()" *ngFor="let tema of temas" [value]="tema">{{ tema.descricao }}</mat-option>
+                <mat-label>Selecione um Tema</mat-label>
+                <mat-select [(ngModel)]=descricaoTema>
+                    <div *ngFor="let tema of temas">
+                        <mat-option (click)="listarIndicadores()" *ngIf="tema.eixo.descricao == descricaoEixo" [value]="tema.descricao">{{ tema.descricao }}</mat-option>
+                    </div>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -30,9 +32,11 @@
         <!-- Combobox (select) Indicadores -->
         <div class="centralizar">
             <mat-form-field>
-                <mat-label>Indicador</mat-label>
-                <mat-select>
-                    <mat-option (click)="selecionarIndicador()" *ngFor="let indicador of indicadores" value="indicador">{{ indicador.descricao }}</mat-option>
+                <mat-label>Selecione um Indicador</mat-label>
+                <mat-select [(ngModel)]=descricaoIndicador>
+                    <div *ngFor="let indicador of indicadores">
+                        <mat-option (click)="listarColetas()" *ngIf="indicador.tema.descricao == descricaoTema" [value]="indicador.descricao">{{ indicador.descricao }}</mat-option>
+                    </div>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -52,7 +56,7 @@
 
         <!-- Botão "exibir" e "limpar" -->
         <div class="centralizar">
-            <button class="bexibir" (click)="exibirInfoIndicador" routerLink="/resultado" mat-raised-button>Exibir</button>
+            <button class="bexibir" routerLink="/resultado" mat-raised-button>Exibir</button>
             <button class="blimpar" (click)="limparTela" mat-raised-button>Limpar</button>
         </div>
 

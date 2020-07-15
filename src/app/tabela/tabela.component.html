@@ -1,5 +1,5 @@
 <div class="mat-elevation-z5 tabela">
-    <table mat-table class="full-width-table" matSort aria-label="Elements" [dataSource]="registros">
+    <table mat-table class="full-width-table" matSort aria-label="Elements" [dataSource]="coletas">
 
         <!--------------------------------- Coluna ID ------------------------------------>
         <ng-container matColumnDef="id">
@@ -16,14 +16,14 @@
         <!------------------------------- Coluna COLETA ---------------------------------->
         <ng-container matColumnDef="coleta">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Coleta</th>
-            <td mat-cell *matCellDef="let row">{{row.coleta}} %</td>
+            <td mat-cell *matCellDef="let row">{{row.coleta}} </td>
         </ng-container>
 
         <!-------------------------------- Coluna META ----------------------------------->
-        <ng-container matColumnDef="meta">
+        <!--<ng-container matColumnDef="meta">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Meta</th>
             <td mat-cell *matCellDef="let row">{{row.meta}} %</td>
-        </ng-container>
+        </ng-container>-->
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -13,13 +13,6 @@ export class EixoService {
   constructor(private http: HttpClient) {}
 
   lerEixo(): Observable<Eixo[]> {
-    return this.http.get<Eixo[]>(this.urlEixo) // Retorna o array completo
+    return this.http.get<Eixo[]>(this.urlEixo)
   }
 }
-
-/*
-Após selecionado, deve-se guardar a variável 'id',
-Então será feita uma requisição get apenas em registros de temas que tenham a variável 'idEixo' iguais a variável 'id' dos registros 'eixo' guardada anteriormente
-ou,
-Passar o id (idEixo) selecionado anteriormente como parâmetro na pesquisa dos temas
-*/

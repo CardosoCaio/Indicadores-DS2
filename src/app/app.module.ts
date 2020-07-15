@@ -11,7 +11,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatButtonModule } from '@angular/material/button'; 
-import { MatCheckboxModule } from '@angular/material/checkbox'; 
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { TabelaComponent } from './tabela/tabela.component';
@@ -50,7 +54,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
 
   ],
   providers: [],
