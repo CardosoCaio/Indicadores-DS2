@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Eixo } from './eixo.model';
+import { Eixo } from '../models/eixo.model';
 
 @Injectable({
   providedIn: 'root'

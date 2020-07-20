@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Indicador } from './indicador.model';
+import { Indicador } from '../models/indicador.model';
 
 @Injectable({
   providedIn: 'root'

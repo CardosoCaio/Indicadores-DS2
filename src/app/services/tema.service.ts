@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Tema } from './tema.model';
+import { Tema } from '../models/tema.model';
 
 @Injectable({
   providedIn: 'root'

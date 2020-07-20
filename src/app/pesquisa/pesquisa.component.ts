@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Eixo } from '../eixo.model';
-import { EixoService } from '../eixo.service';
-import { Tema } from './../tema.model';
-import { TemaService } from '../tema.service';
-import { Indicador } from '../indicador.model';
-import { IndicadorService } from '../indicador.service';
-import { Coleta } from '../coleta.model';
-import { ColetaService } from '../coleta.service';
+import { Eixo } from '../models/eixo.model';
+import { EixoService } from '../services/eixo.service';
+import { Tema } from '../models/tema.model';
+import { TemaService } from '../services/tema.service';
+import { Indicador } from '../models/indicador.model';
+import { IndicadorService } from '../services/indicador.service';
+import { Coleta } from '../models/coleta.model';
+import { ColetaService } from '../services/coleta.service';
 
 @Component({
   selector: 'app-pesquisa', // Equivale a home
@@ -21,7 +21,7 @@ export class PesquisaComponent implements OnInit {
   coletas: Coleta[]
 
   descricaoEixo: string
-  descricaoTema: string // Variável que recebe o input da combobox Tema
+  descricaoTema: string // Variável que recebe o valor do input da combobox Tema
   descricaoIndicador: string
 
   // Injeção dos services dentro do component

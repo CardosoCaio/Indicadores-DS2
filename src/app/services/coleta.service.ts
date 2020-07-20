@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Coleta } from './coleta.model';
+import { Coleta } from '../models/coleta.model';
 
 @Injectable({
   providedIn: 'root'
