@@ -9,7 +9,7 @@
         <div class="centralizar">
             <mat-form-field>
                 <mat-label>Selecione um Eixo</mat-label>
-                <mat-select [(ngModel)]="descricaoEixo">
+                <mat-select [(ngModel)]="descricaoEixoSelecionado">
                     <!--'ngFor' é uma diretiva estrutural que permite que se itere um array através de um loop 'for'-->
                     <!--'eixo' é uma variável local e 'eixos' é a variável criada no componente-->
                     <mat-option (click)="listarTemas()" *ngFor="let eixo of eixos" [value]="eixo.descricao">{{ eixo.descricao }}</mat-option>
@@ -21,9 +21,9 @@
         <div class="centralizar">
             <mat-form-field>
                 <mat-label>Selecione um Tema</mat-label>
-                <mat-select [(ngModel)]=descricaoTema>
+                <mat-select [(ngModel)]=descricaoTemaSelecionado>
                     <div *ngFor="let tema of temas">
-                        <mat-option (click)="listarIndicadores()" *ngIf="tema.eixo.descricao == descricaoEixo" [value]="tema.descricao">{{ tema.descricao }}</mat-option>
+                        <mat-option (click)="listarIndicadores()" *ngIf="tema.eixo.descricao == descricaoEixoSelecionado" [value]="tema.descricao">{{ tema.descricao }}</mat-option>
                     </div>
                 </mat-select>
             </mat-form-field>
@@ -33,9 +33,9 @@
         <div class="centralizar">
             <mat-form-field>
                 <mat-label>Selecione um Indicador</mat-label>
-                <mat-select [(ngModel)]=descricaoIndicador>
+                <mat-select [(ngModel)]=idIndicadorSelecionado>
                     <div *ngFor="let indicador of indicadores">
-                        <mat-option (click)="listarColetas()" *ngIf="indicador.tema.descricao == descricaoTema" [value]="indicador.descricao">{{ indicador.descricao }}</mat-option>
+                        <mat-option (click)="listarColetas()" *ngIf="indicador.tema.descricao == descricaoTemaSelecionado" [value]="indicador.id">{{ indicador.descricao }}</mat-option>
                     </div>
                 </mat-select>
             </mat-form-field>

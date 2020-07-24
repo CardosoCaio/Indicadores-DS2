@@ -18,9 +18,10 @@ export class TabelaComponent implements OnInit {
 
   constructor(private coletaService: ColetaService){ }
 
-  ngOnInit(): void {
+  ngOnInit(): void { // Equivale ao método listarColetas do pesquisa.component.ts
     this.coletaService.lerColeta().subscribe(coletas => {
       this.coletas = coletas
+      //console.log(this.idIndicadorSelecionado)
     })
   }  
 }

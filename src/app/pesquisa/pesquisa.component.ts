@@ -13,6 +13,7 @@ import { ColetaService } from '../services/coleta.service';
   templateUrl: './pesquisa.component.html',
   styleUrls: ['./pesquisa.component.css']
 })
+
 export class PesquisaComponent implements OnInit {
 
   eixos: Eixo[] 
@@ -20,9 +21,9 @@ export class PesquisaComponent implements OnInit {
   indicadores: Indicador[]
   coletas: Coleta[]
 
-  descricaoEixo: string
-  descricaoTema: string // Variável que recebe o valor do input da combobox Tema
-  descricaoIndicador: string
+  descricaoEixoSelecionado: string
+  descricaoTemaSelecionado: string // Variável que recebe o valor do input da combobox Tema
+  idIndicadorSelecionado: string
 
   // Injeção dos services dentro do component
   constructor(private eixoService: EixoService, private temaService: TemaService, private indicadorService: IndicadorService, private coletaService: ColetaService) { }
@@ -46,7 +47,7 @@ export class PesquisaComponent implements OnInit {
   // Método que retornará as informações de ano, coleta e meta de um indicador
   listarColetas(){
     this.coletaService.lerColeta().subscribe(coletas => {this.coletas = coletas})
-    console.log(this.descricaoIndicador)
+    console.log(this.idIndicadorSelecionado)
   }
 
   // Método que exibe o período disponível para exibição e respectiva seleção
