@@ -6,12 +6,11 @@ import { Coleta } from '../models/coleta.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ColetaService { // Obs* Este serviço é um teste, portanto não faz parte da aplicação e deve ser substituído
+export class ColetaService {
 
-  coletabaseUrl = "http://localhost:8080/inova_macae/rest/coleta/buscarcoletas"
   constructor(private http: HttpClient) {}
 
   lerColeta(): Observable<Coleta[]> {
-    return this.http.get<Coleta[]>(this.coletabaseUrl)
+    return this.http.get<Coleta[]>("http://localhost:8080/inova_macae/rest/indicador/buscarmetacoleta/14")
   }
 }

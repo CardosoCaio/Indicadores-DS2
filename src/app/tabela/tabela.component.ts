@@ -20,7 +20,7 @@ export class TabelaComponent implements OnInit {
 
   ngOnInit(): void {
     this.coletaService.lerColeta().subscribe(coletas => {
-      this.coletas = coletas // Nome do modelo no teste: registros
+      this.coletas = coletas
     })
   }  
 }

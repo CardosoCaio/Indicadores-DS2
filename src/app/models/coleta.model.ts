@@ -1,5 +1,12 @@
 export interface Coleta { 
     ano: number
+    idIndicador: number
+    valorColeta: number
+    valorMeta: number
+}
+
+/*export interface Coleta { 
+    ano: number
     coleta: number
     id: number
     indicador:{
@@ -14,5 +21,5 @@ export interface Coleta {
             }
         }
     }
-    meta?: number // Ainda não temos
-}
+    meta: number
+}*/
